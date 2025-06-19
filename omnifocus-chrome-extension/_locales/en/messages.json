@@ -1,0 +1,30 @@
+{
+  "extensionName": {
+    "message": "Save to OmniFocus",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Save tabs and links to OmniFocus 4",
+    "description": "Extension description"
+  },
+  "browserActionTitle": {
+    "message": "Save to OmniFocus",
+    "description": "Tooltip for the browser action button"
+  },
+  "saveToOmniFocus": {
+    "message": "Save to OmniFocus",
+    "description": "Context menu item"
+  },
+  "saveLinkToOmniFocus": {
+    "message": "Save link to OmniFocus",
+    "description": "Context menu item for links"
+  },
+  "savePageToOmniFocus": {
+    "message": "Save page to OmniFocus",
+    "description": "Context menu item for pages"
+  },
+  "commandDescription": {
+    "message": "Save current tab to OmniFocus",
+    "description": "Description for keyboard shortcut"
+  }
+}

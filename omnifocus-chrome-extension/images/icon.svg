@@ -1,0 +1,21 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#7C5CE6" stroke="#5F3DC4" stroke-width="4"/>
+  
+  <!-- Checkmark -->
+  <path d="M40 64 L55 79 L88 46" 
+        stroke="white" 
+        stroke-width="8" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none"/>
+  
+  <!-- Plus sign (top right) -->
+  <g transform="translate(90, 25)">
+    <circle cx="0" cy="0" r="16" fill="#4CAF50" stroke="white" stroke-width="2"/>
+    <path d="M-8 0 L8 0 M0 -8 L0 8" 
+          stroke="white" 
+          stroke-width="3" 
+          stroke-linecap="round"/>
+  </g>
+</svg>

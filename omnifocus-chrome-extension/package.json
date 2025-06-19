@@ -1,0 +1,19 @@
+{
+  "name": "save-to-omnifocus",
+  "version": "1.0.0",
+  "description": "Chrome extension for saving web pages and links to OmniFocus 4",
+  "author": "Your Name",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "package": "zip -r save-to-omnifocus.zip . -x '*.git*' -x 'node_modules/*' -x '*.zip' -x '.DS_Store' -x 'package*.json' -x 'test.html'"
+  },
+  "keywords": [
+    "omnifocus",
+    "productivity",
+    "task-management",
+    "chrome-extension",
+    "gtd"
+  ]
+}

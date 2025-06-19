@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Test Page for Save to OmniFocus Extension</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #333;
+    }
+    h1 {
+      color: #7C5CE6;
+    }
+    .test-section {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .test-links a {
+      display: block;
+      margin: 10px 0;
+      color: #007AFF;
+    }
+    .highlight {
+      background: #FFE66D;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+    code {
+      background: #e5e5e5;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'SF Mono', Monaco, monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Save to OmniFocus Extension Test Page</h1>
+  
+  <p>This page helps you test the Save to OmniFocus Chrome extension functionality.</p>
+  
+  <div class="test-section">
+    <h2>Test 1: Save Current Page</h2>
+    <p>Click the extension icon in your toolbar to save this page to OmniFocus.</p>
+    <p>Expected result: OmniFocus opens with:</p>
+    <ul>
+      <li>Title: "Test Page for Save to OmniFocus Extension"</li>
+      <li>Note: The URL of this page</li>
+    </ul>
+  </div>
+  
+  <div class="test-section">
+    <h2>Test 2: Save with Selected Text</h2>
+    <p>Select this text: <span class="highlight">This is important information that should be saved to OmniFocus.</span></p>
+    <p>Then click the extension icon or use the keyboard shortcut.</p>
+    <p>Expected result: The selected text appears in the task note.</p>
+  </div>
+  
+  <div class="test-section">
+    <h2>Test 3: Save Links via Context Menu</h2>
+    <div class="test-links">
+      <a href="https://www.omnigroup.com/omnifocus">OmniFocus Homepage</a>
+      <a href="https://support.omnigroup.com/documentation/omnifocus/mac/4.0/en/">OmniFocus 4 Documentation</a>
+      <a href="https://discourse.omnigroup.com/c/omnifocus/13">OmniFocus Forums</a>
+    </div>
+    <p>Right-click any of these links and select "Save link to OmniFocus".</p>
+  </div>
+  
+  <div class="test-section">
+    <h2>Test 4: Keyboard Shortcut</h2>
+    <p>Press <code>Cmd+Shift+O</code> (Mac) or <code>Ctrl+Shift+O</code> (Windows/Linux) to save this page.</p>
+    <p>The keyboard shortcut should work from any page.</p>
+  </div>
+  
+  <div class="test-section">
+    <h2>Test 5: Multiple Paragraphs Selection</h2>
+    <p>Try selecting multiple paragraphs of text to test how the extension handles larger selections.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>The extension should capture all selected text and include it in the OmniFocus task note.</p>
+  </div>
+  
+  <div class="test-section">
+    <h2>Troubleshooting</h2>
+    <p>If OmniFocus doesn't open:</p>
+    <ol>
+      <li>Make sure OmniFocus 4 is installed</li>
+      <li>Try opening this URL directly: <a href="omnifocus:///add?name=Test&note=Testing">omnifocus:///add?name=Test&note=Testing</a></li>
+      <li>Check the browser console (F12) for error messages</li>
+      <li>Ensure the extension has the necessary permissions</li>
+    </ol>
+  </div>
+</body>
+</html>

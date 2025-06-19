@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Save to OmniFocus",
+  "version": "1.0.0",
+  "description": "Save tabs and links to OmniFocus 4",
+  "default_locale": "en",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+    },
+    "default_title": "Save to OmniFocus"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "scripting"
+  ],
+  "options_page": "src/options.html",
+  "commands": {
+    "save-to-omnifocus": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+O",
+        "mac": "Command+Shift+O"
+      },
+      "description": "Save current tab to OmniFocus"
+    }
+  }
+}
