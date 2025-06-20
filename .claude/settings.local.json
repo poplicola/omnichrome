@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__firecrawl__firecrawl_scrape",
+      "mcp__fetch__fetch",
+      "Bash(mkdir:*)",
+      "Bash(find:*)",
+      "Bash(touch:*)"
+    ],
+    "deny": []
+  }
+}
