@@ -21,16 +21,6 @@ A modern Chrome extension for quickly saving web pages and links to OmniFocus 4.
 4. Click "Load unpacked" and select the extension directory
 5. The extension icon should appear in your toolbar
 
-### Creating Icons
-
-The extension includes an SVG icon. To create the required PNG icons:
-
-1. Open `images/icon.svg` in a graphics editor
-2. Export as PNG at the following sizes:
-   - 16x16 pixels → save as `icon16.png`
-   - 48x48 pixels → save as `icon48.png`
-   - 128x128 pixels → save as `icon128.png`
-
 ## Usage
 
 ### Basic Usage
@@ -118,14 +108,6 @@ omnifocus-chrome-extension/
 │   ├── icon48.png        # Toolbar icon (48x48)
 │   └── icon128.png       # Store icon (128x128)
 ```
-
-### Building for Production
-
-1. Generate PNG icons from the SVG
-2. Test all functionality thoroughly
-3. Update version in `manifest.json`
-4. Create a ZIP file of the extension directory
-5. Upload to Chrome Web Store
 
 ## License
 
