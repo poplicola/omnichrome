@@ -1,60 +1,137 @@
-# OmniChrome
+# Save to OmniFocus - Chrome Extension
 
-A Chrome extension that enhances your browsing experience with OmniFocus.
+A modern Chrome extension for quickly saving web pages and links to OmniFocus 4.
+
+## Features
+
+- **Quick Save**: Click the toolbar button to save the current page to OmniFocus
+- **Context Menu**: Right-click any link to save it to OmniFocus
+- **Selected Text**: Automatically captures any selected text along with the URL
+- **Keyboard Shortcut**: Use `Cmd+Shift+O` (Mac) or `Ctrl+Shift+O` (Windows/Linux)
+- **Customizable Templates**: Configure how tasks are formatted in OmniFocus
+- **Modern Design**: Built with Manifest V3 for security and performance
 
 ## Installation
 
-### Developer Mode Installation
+### From Source (Development)
 
-1. Download or clone this repository to your local machine
+1. Clone or download this repository
 2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" by toggling the switch in the top right corner
-4. Click "Load unpacked" button
-5. Select the directory containing this extension
-6. The extension should now appear in your Chrome toolbar
+3. Enable "Developer mode" in the top right
+4. Click "Load unpacked" and select the extension directory
+5. The extension icon should appear in your toolbar
 
-### Manual Installation Steps
+### Creating Icons
 
-1. **Download the extension files**
-   - Clone this repository or download as ZIP
-   - Extract files to a folder on your computer
+The extension includes an SVG icon. To create the required PNG icons:
 
-2. **Open Chrome Extensions page**
-   - Type `chrome://extensions/` in the address bar
-   - Or go to Menu → More Tools → Extensions
-
-3. **Enable Developer Mode**
-   - Toggle the "Developer mode" switch in the top right
-
-4. **Load the extension**
-   - Click "Load unpacked"
-   - Navigate to and select the extension folder
-   - Click "Select Folder"
-
-5. **Verify installation**
-   - The extension should appear in your extensions list
-   - Look for the extension icon in your Chrome toolbar
+1. Open `images/icon.svg` in a graphics editor
+2. Export as PNG at the following sizes:
+   - 16x16 pixels → save as `icon16.png`
+   - 48x48 pixels → save as `icon48.png`
+   - 128x128 pixels → save as `icon128.png`
 
 ## Usage
 
-Once installed, the extension will be available in your Chrome toolbar. Click the icon to access its features.
+### Basic Usage
 
-## Updating
+1. **Save Current Page**: Click the extension icon in the toolbar
+2. **Save a Link**: Right-click any link and select "Save link to OmniFocus"
+3. **Save with Selection**: Select text on the page before saving to include it in the task note
+4. **Keyboard Shortcut**: Press `Cmd+Shift+O` (Mac) or `Ctrl+Shift+O` to quickly save
 
-To update the extension after making changes:
-1. Go to `chrome://extensions/`
-2. Find the extension
-3. Click the refresh icon
+### Customizing Templates
+
+1. Click the extension icon and select "Options" (or right-click → "Options")
+2. Customize the task title and note templates using these variables:
+   - `{title}` - The page title or link text
+   - `{url}` - The page URL
+   - `{selection}` - Any selected text
+
+### Example Templates
+
+**Read Later**:
+- Title: `Read: {title}`
+- Note: `{url}\n\n{selection}`
+
+**Research**:
+- Title: `Research: {title}`
+- Note: `Source: {url}\n\nNotes: {selection}`
+
+**Review**:
+- Title: `Review: {title}`
+- Note: `Link: {url}\n\nContext: {selection}`
+
+## Requirements
+
+- Google Chrome 88 or later
+- OmniFocus 4 for Mac
+- macOS (OmniFocus must be installed)
+
+## How It Works
+
+The extension uses OmniFocus's URL scheme (`omnifocus:///add`) to create tasks. When you save a page or link:
+
+1. The extension captures the page information
+2. Formats it according to your templates
+3. Creates an OmniFocus URL with the task details
+4. Triggers the URL to open OmniFocus's Quick Entry window
 
 ## Troubleshooting
 
-- If the extension doesn't appear, make sure Developer mode is enabled
-- Check the console for any error messages
-- Ensure all required files (manifest.json, etc.) are present in the selected folder
+### OmniFocus doesn't open
+- Make sure OmniFocus 4 is installed on your Mac
+- Check that OmniFocus is set as the default handler for `omnifocus://` URLs
+- Try opening `omnifocus:///add?name=Test` directly in Chrome to test
+
+### Extension doesn't appear
+- Make sure Developer Mode is enabled in Chrome
+- Try reloading the extension from `chrome://extensions/`
+- Check the browser console for any errors
+
+### Keyboard shortcut doesn't work
+- The shortcut might conflict with another extension or system shortcut
+- Go to `chrome://extensions/shortcuts` to customize it
+
+## Privacy
+
+This extension:
+- Only accesses the active tab when you trigger it
+- Stores your template preferences locally using Chrome's sync storage
+- Does not collect or transmit any personal data
+- Does not communicate with any external servers
 
 ## Development
 
-To modify the extension:
-1. Edit the source files
-2. Reload the extension in Chrome to see changes
-3. Check the extension's background page console for debugging
+### Project Structure
+```
+omnifocus-chrome-extension/
+├── manifest.json          # Extension manifest (V3)
+├── src/
+│   ├── background.js      # Service worker
+│   ├── options.html       # Options page
+│   ├── options.js         # Options page logic
+│   └── options.css        # Options page styles
+├── images/
+│   ├── icon.svg          # Source icon
+│   ├── icon16.png        # Toolbar icon (16x16)
+│   ├── icon48.png        # Toolbar icon (48x48)
+│   └── icon128.png       # Store icon (128x128)
+└── README.md             # This file
+```
+
+### Building for Production
+
+1. Generate PNG icons from the SVG
+2. Test all functionality thoroughly
+3. Update version in `manifest.json`
+4. Create a ZIP file of the extension directory
+5. Upload to Chrome Web Store
+
+## License
+
+This is an unofficial extension not affiliated with The Omni Group.
+
+## Credits
+
+Inspired by the original "Send to OmniFocus" extension by Leonid Shevtsov.
