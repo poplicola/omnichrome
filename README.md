@@ -1,6 +1,6 @@
 # OmniChrome
 
-A Chrome extension that enhances your browsing experience.
+A Chrome extension that enhances your browsing experience with OmniFocus.
 
 ## Installation
 
