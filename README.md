@@ -117,7 +117,6 @@ omnifocus-chrome-extension/
 │   ├── icon16.png        # Toolbar icon (16x16)
 │   ├── icon48.png        # Toolbar icon (48x48)
 │   └── icon128.png       # Store icon (128x128)
-└── README.md             # This file
 ```
 
 ### Building for Production
